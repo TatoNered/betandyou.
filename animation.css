@@ -1,0 +1,109 @@
+/* Скрываем элементы перед появлением */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Когда элемент становится видимым */
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.zoom-on-scroll {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.zoom-on-scroll.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Общее начальное состояние */
+.fade-in,
+.slide-in,
+.slide-up,
+.zoom-in {
+  opacity: 0;
+  transition: all 0.8s ease-out;
+  will-change: transform, opacity;
+}
+
+/* Fade In */
+.fade-in.in-view {
+  opacity: 1;
+}
+
+/* Slide In from Left */
+.slide-in.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-in {
+  transform: translateX(-40px);
+}
+
+/* Slide Up */
+.slide-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-up {
+  transform: translateY(40px);
+}
+
+/* Zoom In */
+.zoom-in.in-view {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.zoom-in {
+  transform: scale(0.85);
+}
+.mobile-platform-card {
+  opacity: 0;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+  perspective: 1000px;
+}
+
+.mobile-platform-card.card-visible {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+
+.rotate-in {
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.rotate-in.visible {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.advantages-grid .advantage-item {
+  transition-delay: 0s;
+}
+.advantages-grid .advantage-item:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.advantages-grid .advantage-item:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.advantages-grid .advantage-item:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.advantages-grid .advantage-item:nth-child(4) {
+  transition-delay: 0.4s;
+}
+.advantages-grid .advantage-item:nth-child(5) {
+  transition-delay: 0.5s;
+}
